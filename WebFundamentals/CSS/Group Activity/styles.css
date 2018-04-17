@@ -1,0 +1,70 @@
+
+#Outline{
+ background-color:gray;
+ height: 650px;
+ width: 525px;
+}
+.RedBox1{
+    background-color: red;
+    height: 100px;
+    width: 200px;
+    display:inline-block;
+    margin: 25px;
+}
+.RedBox2{
+    background-color: red;
+    height: 100px;
+    width: 200px;
+    display:inline-block;
+    margin: 25px;
+}
+.BlueBox{
+    background-color: blue;
+    height: 100px;
+    width: 450px;
+    display:inline-block;
+    margin: 25px;
+}
+.YellowBox1{
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    margin: 25px;
+}
+.YellowBox2{
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    margin: 25px;
+}
+.YellowBox3{
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    margin: 25px;
+}
+.GreenBox{
+    background-color: green;
+    height: 100px;
+    width: 450px;
+    display:inline-block;
+    margin: 25px;
+}
+.PurpleBox1{
+    background-color: purple;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    margin:25px;
+}
+.PurpleBox2{
+    background-color: purple;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    margin:25px;
+    margin-left: 250px;
+}

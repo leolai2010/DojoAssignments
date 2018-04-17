@@ -1,0 +1,77 @@
+Microsoft Windows [Version 10.0.16299.125]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Leo Lai>cd desktop
+
+C:\Users\Leo Lai\Desktop>md DojoAssignments
+
+C:\Users\Leo Lai\Desktop>cd DojoAssignments
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>md WebFundamentals
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>md Python
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>md MEAN
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>md Ruby
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>md iOS
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>md netCore
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>cd WebFundamentals
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>md Git
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>md HTML
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>md CSS
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>md Javascript
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>cd Git
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\Git>copy NUL about.txt
+        1 file(s) copied.
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\Git>cd..
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>xcopy GIT HTML
+GIT\about.txt
+1 File(s) copied
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>xcopy GIT CSS
+GIT\about.txt
+1 File(s) copied
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>xcopy GIT Javascript
+GIT\about.txt
+1 File(s) copied
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>cd HTML
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\HTML>copy NUL indentation.html
+        1 file(s) copied.
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\HTML>cd..
+
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals>cd..
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>dir /b /s
+C:\Users\Leo Lai\Desktop\DojoAssignments\iOS
+C:\Users\Leo Lai\Desktop\DojoAssignments\MEAN
+C:\Users\Leo Lai\Desktop\DojoAssignments\netCore
+C:\Users\Leo Lai\Desktop\DojoAssignments\Python
+C:\Users\Leo Lai\Desktop\DojoAssignments\Ruby
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\CSS
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\Git
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\HTML
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\Javascript
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\CSS\about.txt
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\Git\about.txt
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\HTML\about.txt
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\HTML\indentation.html
+C:\Users\Leo Lai\Desktop\DojoAssignments\WebFundamentals\Javascript\about.txt
+
+C:\Users\Leo Lai\Desktop\DojoAssignments>
