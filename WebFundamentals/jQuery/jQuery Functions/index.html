@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My jQuery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="overlay">
+        <div id="title">
+            <h1>jQuery Function Practice</h1>
+        </div>
+        <div class="content">
+            <h3>.click() Function Showcase</h3>
+            <p id="pred">This is Red</p>
+            <button id="red" type="button">Click Me!</button>
+        </div>
+        <div class="content">
+            <h3>.hide() and .show() Functions Showcase</h3>
+            <p id="hs">Hide Me! Then Show me!</p>
+            <button id="hide" type="button">Hide</button>
+            <button id="show" type="button">Show</button>
+        </div>
+        <div class="content">
+                <h3>.toggle() Functions Showcase</h3>
+                <p id="tp">Toggle Me!</p>
+                <button id="toggle" type="button">Toggle</button>
+        </div>
+        <div class="content">
+                <h3>.slideDown() and .slideUp() Functions Showcase</h3>
+                <p id="sud">Slide Me Up and Down</p>
+                <button id="slideu" type="button">Slide UP!</button>
+                <button id="slided" type="button">Slide DOWN!</button>
+        </div>
+        <div class="content">
+                <h3>.slideToggle() Functions Showcase</h3>
+                <p id="stp">Toggle Me Up and Down!</p>
+                <button id="stoggle" type="button">Slide Toggle</button>
+        </div>
+        <div class="content">
+                <h3>.FadeIn() and .FadeOut() Functions Showcase</h3>
+                <p id="pfade">Fade Me IN and OUT!</p>
+                <button id="bfadeo" type="button">Fade Out</button>
+                <button id="bfadei" type="button">Fade In</button>
+        </div>
+        <div class="content">
+                <h3>.addClass() Functions Showcase</h3>
+                <p id="acp">Make me BIG and RED</p>
+                <button id="acb" type="button">Change Class</button>
+        </div>
+        <div class="content">
+                <h3>.before() Functions Showcase</h3>
+                <p id="bp">Say Hello to ME</p>
+                <button id="bb" type="button">Say Hello</button>
+        </div>
+        <div class="content">
+                <h3>.after() Functions Showcase</h3>
+                <p id="ap">Say GoodBye to ME</p>
+                <button id="ab" type="button">Say GoodBye</button>
+        </div>
+        <div class="content">
+                <h3>.append() Functions Showcase</h3>
+                <p id="apdp">Give me a Sibling!</p>
+                <button id="apdb" type="button">Give</button>
+        </div>
+        <div class="content">
+                <h3>.html() Functions Showcase</h3>
+                <p id="htmlp">All Your Base</p>
+                <button id="htmlb" type="button">Belong to Me</button>
+        </div>
+        <div class="content">
+                <h3>.attr() Functions Showcase</h3>
+                <img src="Dog.jpg">
+                <p>Make me Bigger!</p>
+                <button id="attrb" type="button">Change My Size</button>
+        </div>
+        <div class="content">
+                <h3>.val() Functions Showcase</h3>
+                <p>Tell me your Name: <input type="text" name="user"></p>
+                <button id="valb" type="button">My Name is...</button>
+        </div>
+        <div class="content">
+                <h3>.text() Functions Showcase</h3>
+                <p>When Everyone is Special </p>
+                <button id="textb" type="button">Then No One is Special</button>
+        </div>
+        <div class="content">
+                <h3>.data() Functions Showcase</h3>
+                <p>End of the Show!</p>
+                <button id="datab1" type="button">Attach Diploma First!</button>
+                <button id="datab2" type="button">Get the Diploma!</button>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $("#red").click(function(){
+        $("#pred").css("color", "red");
+    });
+    $("#hide").click(function(){
+        $("#hs").hide();
+    });
+    $("#show").click(function(){
+        $("#hs").show();
+    });
+    $("#toggle").click(function(){
+        $("#tp").toggle();
+    });
+    $("#slided").click(function(){
+        $("#sud").slideDown();
+    });
+    $("#slideu").click(function(){
+        $("#sud").slideUp();
+    });
+    $("#stoggle").click(function(){
+        $("#stp").slideToggle();
+    });
+    $("#bfadei").click(function(){
+        $("#pfade").fadeIn();
+    });
+    $("#bfadeo").click(function(){
+        $("#pfade").fadeOut();
+    });
+    $("#acb").click(function(){
+        $("#acp").addClass("bigredtext");
+    });
+    $("#bb").click(function(){
+        $("#bp").before("<p>Hello World!</p>");
+    });
+    $("#ab").click(function(){
+        $("#ap").after("<p>Goodbye!</p>");
+    });
+    $("#apdb").click(function(){
+        $("#apdp").append("<b>Sibling Text</b>");
+    });
+    $("#htmlb").click(function(){
+        $("p").after("<p>All Your Base Belong to Me!</p>");
+    });
+    $("#attrb").click(function(){
+        $("img").attr("width", "1000");
+    });
+    $("#valb").click(function(){
+        $("input:text").val("Leo Lai");
+    });
+    $("#textb").click(function(){
+        $("p").text("No One is Special");
+    });
+    $("#datab1").click(function(){
+        $("div").data("greeting", "Congratulations! You Graduated!");
+    });
+    $("#datab2").click(function(){
+        alert($("div").data("greeting"));
+    });
+</script> 
+</body>
+</html>

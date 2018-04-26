@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#overlay{
+    margin: 0 auto;
+    height: 331px;
+    width: 11%;
+    background: linear-gradient(silver, white, silver);
+    border: solid 2px black;
+    position: relative;
+}
+#title{
+    border: solid 1px black;
+    margin: 0 auto;
+    background-color: silver;
+    text-align: center;
+}
+.content{
+    display:inline-block;
+    height: 50px;
+    width: 200px;
+    vertical-align: top;
+    margin:4px;
+}
+img{
+    height: 50px;
+    width: 200px;
+}

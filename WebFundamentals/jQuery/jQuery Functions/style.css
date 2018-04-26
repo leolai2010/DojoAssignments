@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#overlay{
+    margin: 0 auto;
+    height: 1159px;
+    width: 60%;
+    background: linear-gradient(silver, white, silver);
+    border: solid 2px black;
+}
+#title{
+    border: solid 1px black;
+    margin: 0 auto;
+    background-color: silver;
+    text-align: center;
+}
+.content{
+    text-align: center;
+    border: solid 1px black;
+}
+.bigredtext{
+    font-size: 150%;
+    color: red;
+}
+img{
+    height: 200px;
+}

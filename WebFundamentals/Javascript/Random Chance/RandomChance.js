@@ -1,24 +1,24 @@
-var winning = 
-var chance =
-  
+
+var winning = Math.floor(Math.random()* ((100-50)+1) + 50);
+var chance = Math.floor(Math.random()* ((100-1)+1) +1);
 function slotmachine(quarters){
-  var roll = 
-      for(var i = 1; i<quarters; i++)
-      {
-        if(roll[i] == chance[i])
+      for(var i = quarters; i>0; i--){
+      var roll = Math.floor(Math.random()* ((100-1)+1) +1);
+            console.log(chance);
+            console.log(roll);
+        if(roll == chance)
           {
-            quarters = winning + quarter;
-            console.log("You Won a total of", quarters,"quarters !!");
+            quarters = winning + quarters;
+            console.log('You Won '+  winning + " quarters! You now have " + quarters + " quarters.");
           }
-        else if(roll[i] != chance[i])
+        else if(roll !== chance)
           {
             quarters = quarters - 1;
-            console.log("Try again!");
+            console.log("You lost! Try again!");
           }
-        else if(quarters === 0)
-          {
-            return 0;
-          }
+   
       }
+    console.log("You have no more quarters");
+    return 0;
 }
 slotmachine(5);

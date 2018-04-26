@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#overlay{
+    margin: 0 auto;
+    height: 630px;
+    width: 60%;
+    background: linear-gradient(silver, white, silver);
+    border: solid 2px black;
+}
+#title{
+    border: solid 1px black;
+    margin: 0 auto;
+    background-color: silver;
+    text-align: center;
+}
+.content{
+    display: inline-block;
+    height: 255px;
+    width: 282px;
+    vertical-align: top;
+}
+img{
+    height: 200px;
+    width: 230px;
+}
+#Nbutton{
+    height: 60px;
+    width: 190px;
+    background-color: green;
+    margin: 0px 50px;
+    text-align: center;
+    font-size: 50px;
+    box-shadow: 5px 5px grey;
+
+}
