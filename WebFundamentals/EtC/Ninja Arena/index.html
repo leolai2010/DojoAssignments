@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ninja Arena</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- <img src="beach.jpg"> -->
+        <div id="selector">
+         <h1>Select Arena</h1>
+         <button id="beachb" type="button">Beach</button>
+         <button id="planetb"type="button">Planet</button>
+         <button id="dojob"type="button">Dojo</button>
+         <button id="forestb"type="button">Forest</button>
+         <button id="matrixb"type="button">Matrix</button>
+         <button id="snowb"type="button">Snow</button>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    // $("#beachb").hover(function(){
+    // $("#beachimg").toggle()
+    // });
+    $("#beachb").mouseover(function(){
+    $("#wrapper").css("background","url('beach.jpg')");})
+    $("#beachb").mouseout(function(){
+    $("#wrapper").css("background","white");})
+    $("#planetb").mouseover(function(){
+    $("#wrapper").css("background","url('earth.jpg')");})
+    $("#planetb").mouseout(function(){
+    $("#wrapper").css("background","white");})
+    $("#dojob").mouseover(function(){
+    $("#wrapper").css("background","url('dojo.jpg')");})
+    $("#dojob").mouseout(function(){
+    $("#wrapper").css("background","white");})
+    $("#forestb").mouseover(function(){
+    $("#wrapper").css("background","url('forest.jpg')");})
+    $("#forestb").mouseout(function(){
+    $("#wrapper").css("background","white");})
+    $("#matrixb").mouseover(function(){
+    $("#wrapper").css("background","url('matrix.jpg')");})
+    $("#maxtrixb").mouseout(function(){
+    $("#wrapper").css("background","white");})
+    $("#snowb").mouseover(function(){
+    $("#wrapper").css("background","url('snow.jpg')");})
+    $("#snowb").mouseout(function(){
+    $("#wrapper").css("background","white");})
+
+        
+</script>
+</body>
+</html>

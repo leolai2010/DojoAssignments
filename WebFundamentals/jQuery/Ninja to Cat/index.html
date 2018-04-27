@@ -11,7 +11,7 @@
             <h1>Ninja To Cat</h1>
         </div>
         <div class="content">
-            <img src="ninja0.png" data-alt-src="cat0.png">
+            <img src="img/ninja0.png" data-alt-src="img/cat0.png">
         </div>
         <div class="content">
             <img src="img/ninja1.png" data-alt-src="img/cat1.png">
@@ -29,11 +29,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     $("img").click(function(){
-    $(this).attr("data-alt-src");
+        var temp = $(this).attr("data-alt-src");
+        var ninjaI = $(this).attr("src");
+        $(this).attr("src",temp);
+        $(this).attr("data-alt-src", ninjaI);
     });
-    // var second =$("img").click(function(){
-    // $(this).attr("data-alt-src", "src");
-    // });
 </script>
 </body>
 </html>

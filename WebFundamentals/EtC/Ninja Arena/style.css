@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px
+}
+#wrapper{
+    margin: 0 auto;
+    height: 800px;
+    width: 85%;
+    background: linear-gradient(silver,white,silver);
+    border: solid 2px black;
+    position: relative;
+    background-image: none;
+}
+#selector{
+    display: inline-block;
+    height: 198px;
+    width: 21%;
+    background: linear-gradient(silver,white,silver);
+    border: solid 1px black;
+    position: absolute;
+    top: 200px;
+    left: 42%;
+    border-radius: 25px;
+}
+button{
+    display: inline-block;
+    padding: 17px;
+    border: solid 1px black;
+    background: linear-gradient(silver,white,silver);
+    border-radius: 5px;
+    margin: 9px;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+}
+img{  
+    width: 100%;
+    height: 100%;
+}
