@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    background: linear-gradient(to right, blue , silver);
+    color: white;
+}
+img{
+    display:inline-block;
+    border: solid 1px black;
+}

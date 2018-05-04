@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cute Animals</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <h1>Cute Animals</h1>
+    {% for t in images %}
+    <img src="/static/img/{{ t }}.png">
+    {% endfor %}
+</body>
+</html>

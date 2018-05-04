@@ -1,0 +1,53 @@
+#overlay{
+    margin: 0 auto;
+    display:block;
+    width:65%;
+    height: 500px;
+}
+#storefront{
+    display: inline-block;
+    width: 50%;
+}
+#fruityt{
+    background: linear-gradient(silver, white, silver);
+    display:inline-block;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+#infotab{
+    display:inline-block;
+    height: 100px;
+    width: 100%;
+    margin: 10px;
+    vertical-align: top;
+}
+#descriptiontab{
+    background: linear-gradient(silver, white, silver);
+    display: inline-block;
+    width: 45%;
+    height: 95%;
+    vertical-align: top;
+    margin: 10px;
+    font-size: 270%;
+    padding: 18px
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+p{
+    margin:5px;
+}

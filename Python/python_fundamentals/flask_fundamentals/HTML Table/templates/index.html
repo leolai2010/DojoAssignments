@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table</title>
+    <style>
+    table, th, td{
+        border: 1px solid black;
+        padding: 5px;
+    }
+    table{
+    border-spacing: 15px;
+    }
+    </style>
+</head>
+<body>
+    <h1>HTML Table</h1>
+<table>
+    <tr>
+        <th>User #</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Full Name</th>
+        <th>Full Name in Upper Case</th>
+        <th>Length of Full Name</th>
+    </tr>
+        {% for i in range(0, sarr|length): %}
+        <tr>
+        <td>{{i}}</td>
+        <td>{{sarr[i]["first_name"]}}</td>
+        <td>{{sarr[i]["last_name"]}}</td>
+        <td>{{sarr[i]["first_name"] + sarr[i]["last_name"]}}</td>
+        <td>{{sarr[i]["first_name"].upper() +  sarr[i]["last_name"].upper()}}</td>
+        <td>{{sarr[i]["first_name"]|length + sarr[i]["last_name"]|length }}</td>    
+        {% endfor %}   
+        </tr>
+    </tr>
+</table>
+</body>
+</html>
