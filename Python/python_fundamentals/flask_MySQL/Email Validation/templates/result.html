@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="static/main.css" />
+</head>
+<body>
+    <div>
+        <h1>Email Validation with Data Base</h1>
+        <h2>Email List</h2>
+        {% for i in range (1, emails|length) %}
+        <p>Email: {{ emails[i]["email"]  }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

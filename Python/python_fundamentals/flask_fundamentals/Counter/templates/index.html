@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="static/main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Counter</h1>
+    <div class="container">
+        <p>{{ counts }}</p>
+            <form action="/increase", method='post'>
+                <input type="submit" value="Count +2">
+            </form>
+            <form action="/reset", method='post'>
+                <input type="submit" value="Reset">
+            </form>
+    </div>
+</body>
+</html>

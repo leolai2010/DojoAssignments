@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form and Log-in</title>
+    <style>
+    fieldset{
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+    }
+    label{
+        margin: 2px;
+    }
+    input{
+        margin: 2px;
+    }
+    button{
+        margin: 2px;
+    }
+    </style>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <fieldset>
+        <h3>Registration Form</h3>
+        <form action='/process', method='post'>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text"><br>
+            <label for="first_name">First Name</label>
+            <input id="first_name" name="first_name" type="text"><br>
+            <label for="last_name">Last Name</label>
+            <input id="last_name" name="last_name" type="text"><br>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password"><br>
+            <label for="password_confirmation">Password Confirmation</label>
+            <input id="password_confirmation" name="password_confirmation" type="password"><br>
+            <button>Submit</button>
+        </form>
+    </fieldset>
+    <fieldset>
+      <h3>Log-In</h3>
+      <form action='/login', method='post'>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text"><br>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password"><br>
+            <button>Submit</button>
+      </form>
+    </fieldset>
+</body>
+</html>

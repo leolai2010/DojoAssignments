@@ -1,0 +1,6 @@
+INSERT INTO reddit (first_name, last_name)
+VALUES ("Leo" , "Lai");
+SELECT middle_name FROM reddit
+UPDATE reddit SET first_name = 'Leo', last_name = 'Lai' 
+WHERE ID = 1;
+DELETE FROM reddit WHERE ID = 1;
