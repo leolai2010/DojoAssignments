@@ -1,0 +1,10 @@
+fieldset{
+    display: inline-block;
+    vertical-align: top;
+}
+input{
+    margin: 7px;
+}
+button{
+    margin: 5px;
+}

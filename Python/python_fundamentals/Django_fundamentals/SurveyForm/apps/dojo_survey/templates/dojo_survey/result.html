@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted Info</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dojo_survey/css/main.css' %}">
+</head>
+<body>
+    <h2>Dojo Survey</h2>
+    <div class="container">
+        <h3>Submitted Info</h3>
+        <table>
+            <tr><td>Name: {{ request.session.namer }}</td></tr>
+            <tr><td>Dojo Location: {{ request.session.locationz }}</td></tr>
+            <tr><td>Favorite Language: {{ request.session.languagez }}</td></tr>
+            <tr><td>Comment: {{ request.session.commentz }}</td></tr>
+        </table>
+        <div class="row">
+            <form action="/", method ='post'>
+            {% csrf_token %}
+                <input type="submit" value="Go Back">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

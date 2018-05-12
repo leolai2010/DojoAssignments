@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Random Word Generator</title>
+      {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}">
+      <!-- Put the static files in the static folder inside your app.  
+           Django collects files within all static folders and puts them within a single folder -->    
+    </head>
+    <body>
+        <h1>Random Word (attempt # {{ request.session.number }})</h1>
+        <form action="/random_word_generator/generate" method="post">
+          {% csrf_token %}
+          <p>{{ unique_id }}</p>
+        <button>Generate</button>
+        </form>
+    </body>
+  </html>
