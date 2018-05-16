@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ninja Gold</title>
+    <style>
+        fieldset{
+            display:inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        #activity_log{
+            display:inline-block;
+            height: 250px;
+            width: 500px;
+            border: solid 1px black; 
+            text-align: center;
+        }
+        #overlay{
+            margin: auto;
+            width: 32%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id='overlay'>
+    <div id='money_display'>
+        <p>Your Gold: {{ request.session.total_gold }}</p>
+    </div> 
+    <fieldset>
+    <form action='/process_money' method='POST'>
+    {% csrf_token %}
+        <h3>Farm</h3>
+        <p>(earns 10-20 golds)</p>
+        <button>Find Gold!</button>
+        <input type='hidden' name='building' value= 'farm'}>
+    </form>
+    </fieldset>
+    <fieldset>
+    <form action='/process_money' method='POST'>
+    {% csrf_token %}
+        <h3>Cave</h3>
+        <p>(earns 5-10 golds)</p>
+        <button>Find Gold!</button>
+        <input type='hidden' name='building' value= 'cave'>
+    </form>
+    </fieldset>
+    <fieldset>
+    <form action='/process_money' method='POST'>
+    {% csrf_token %}
+        <h3>House</h3>
+        <p>(earns 2-5 golds)</p>
+        <button>Find Gold!</button>
+        <input type='hidden' name='building' value= 'house'}>
+    </form>
+    </fieldset>
+    <fieldset>
+    <form action='/process_money' method='POST'>
+    {% csrf_token %}
+        <h3>Casino</h3>
+        <p>(earns/takes 0-50 golds)</p>
+        <button>Find Gold!</button>
+        <input type='hidden' name='building' value= 'casino'}>
+    </form>
+    </fieldset>
+    <p>Activities</p>
+    <div id='activity_log'>
+    {% for log in request.session.activities reversed %}
+        {% if "lost" in log %}
+          <h4 style='color:red'>{{ log }}</h4>
+        {% else %}
+          <h4 style='color:green'>{{ log }}</h4>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+</body>
+</html>

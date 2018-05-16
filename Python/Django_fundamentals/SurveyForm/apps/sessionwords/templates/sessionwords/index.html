@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sessionwords/css/main.css' %}">
+</head>
+<body>
+    <fieldset>
+        <div id="editor">
+            <h2>Add a new word!</h2>
+            <form action="/sessionwords/addingwords" method="POST">
+            {% csrf_token %}
+                <input type="text" name="addword"><br>
+                <p>Choose a Color!</p>
+                <input type="radio" name="color" value="red"> Red<br>
+                <input type="radio" name="color" value="green"> Green<br>
+                <input type="radio" name="color" value="blue" checked> Blue<br>
+                <input type="checkbox" name="fontchange" value = "xx-large"> Show in Big Fonts!<br>
+                <Button id = 'addbutt'>Add to Session</Button>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div id="messageboard">
+            <form action="/sessionwords/clearsession" method="POST">
+            {% csrf_token %}
+                <Button id = 'clearbutt'>Clear Session</Button>
+            {% for info in request.session.newword %}
+                <p style='color: {{ info.colorize }}; font-size: {{info.fontsize}};'>{{ info.addedword }}{{ info.time }}</p>
+            {% endfor %}
+            </form>
+        </div>
+    </fieldset>
+</body>
+</html>
