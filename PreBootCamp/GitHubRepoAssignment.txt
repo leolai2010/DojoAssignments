@@ -1,0 +1,49 @@
+Microsoft Windows [Version 10.0.16299.125]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Leo Lai>md GitHubRepoAssignment
+
+C:\Users\Leo Lai>cd GitHubRepoAssignment
+
+C:\Users\Leo Lai\GitHubRepoAssignment>git init
+Initialized empty Git repository in C:/Users/Leo Lai/GitHubRepoAssignment/.git/
+
+C:\Users\Leo Lai\GitHubRepoAssignment>md readme.md
+
+C:\Users\Leo Lai\GitHubRepoAssignment>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+C:\Users\Leo Lai\GitHubRepoAssignment>git add readme.md
+
+C:\Users\Leo Lai\GitHubRepoAssignment>git commit -m "content includes a readme file to be pushed on to GitHub"
+On branch master
+
+Initial commit
+
+C:\Users\Leo Lai>echo "# GitHubRepoAssignment" >> README.md
+
+C:\Users\Leo Lai>git init
+Reinitialized existing Git repository in C:/Users/Leo Lai/.git/
+
+C:\Users\Leo Lai>git add README.md
+
+C:\Users\Leo Lai>git commit -m "first commit"
+[master (root-commit) c52fd30] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+C:\Users\Leo Lai>git remote add origin https://github.com/leolai2010/GitHubRepoAssignment.git
+
+C:\Users\Leo Lai>git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 232 bytes | 232.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/leolai2010/GitHubRepoAssignment.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\Leo Lai>

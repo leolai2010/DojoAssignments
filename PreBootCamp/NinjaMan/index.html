@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NinijaMan</title>
+	<style>
+	div {
+		width: 32px;
+		height: 32px;
+	}
+	.ninjaman{
+		background-color: black;
+		background-image: url('ninja.gif');
+		display: inline-block;
+	}
+
+	.wall{
+		background-color: blue;
+		display: inline-block;
+	}
+	.sushi{
+		background-color: black;
+		background-image: url('sushi.png');
+		display: inline-block;
+	}
+	.ground{
+		background-color: black;
+		display: inline-block;
+	}
+	</style>
+</head>
+<body>
+	<div id='world'></div>
+	<div id='ninjaman'></div>
+</body>
+<script type="text/javascript">
+ var world = [
+ 		[1,1,1,1,1,1,1,1,1,1,1,1,1],
+ 		[1,2,2,2,2,2,2,2,2,2,2,2,1],
+ 		[1,2,2,2,2,2,2,2,2,2,2,2,1],
+ 		[1,2,2,2,2,2,2,2,2,2,2,2,1],
+ 		[1,2,2,2,2,2,5,2,2,2,2,2,1],
+ 		[1,2,2,2,2,2,2,2,2,2,2,2,1],
+ 		[1,2,2,2,2,2,2,2,2,2,2,2,1],
+ 		[1,2,2,2,2,2,2,2,2,2,2,2,1],
+ 		[1,2,2,2,2,2,2,2,2,2,2,2,1],
+ 		[1,1,1,1,1,1,1,1,1,1,1,1,1]
+ ];
+  var worldDict = {
+  		0: 'ground',
+  		1: 'wall',
+  		2: 'sushi'
+  }
+  function drawWorld(){
+  	output = "";
+  	for(var row = 0; row<world.length; row++)
+  	{
+  		output += "<div class = 'row'>"
+  		for(var x = 0; x<world[row].length; x++)
+  		{
+  			output += "<div class = '" + worldDict[world[row][x]] +"'></div>"
+  		}
+  		output += "</div>"
+  	}
+  	document.getElementById('world').innerHTML = output;
+  }
+  drawWorld();
+</script>
+</html>

@@ -1,0 +1,193 @@
+Microsoft Windows [Version 10.0.16299.125]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Leo Lai>md gittest
+
+C:\Users\Leo Lai>cd gittest
+
+C:\Users\Leo Lai\gittest>git intit
+git: 'intit' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+C:\Users\Leo Lai\gittest>git init
+Initialized empty Git repository in C:/Users/Leo Lai/gittest/.git/
+
+C:\Users\Leo Lai\gittest>copy NUL index.html
+        1 file(s) copied.
+
+C:\Users\Leo Lai\gittest>copy NUL styles.css
+        1 file(s) copied.
+
+C:\Users\Leo Lai\gittest>copy NUL aboutMe.txt
+        1 file(s) copied.
+
+C:\Users\Leo Lai\gittest>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        aboutMe.txt
+        index.html
+        styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Leo Lai\gittest>git add aboutMe.txt
+
+C:\Users\Leo Lai\gittest>git add index.html
+
+C:\Users\Leo Lai\gittest>git add styles.css
+
+C:\Users\Leo Lai\gittest>git commit -m "aboutMe.txt added"
+[master (root-commit) e3beb50] aboutMe.txt added
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+C:\Users\Leo Lai\gittest>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   aboutMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Leo Lai\gittest>add aboutMe.txt
+'add' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Leo Lai\gittest>git add aboutMe.txt
+
+C:\Users\Leo Lai\gittest>git commit -m "updated aboutMe.txt"
+[master 4718540] updated aboutMe.txt
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Leo Lai\gittest>git log
+commit 4718540a25ce003646ade0add0d689d3865382bd (HEAD -> master)
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:34:35 2018 -0700
+
+    updated aboutMe.txt
+
+commit e3beb5068b051b6a8a1569b7dadf8ab379ef0126
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:32:23 2018 -0700
+
+    aboutMe.txt added
+
+C:\Users\Leo Lai\gittest>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   aboutMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Leo Lai\gittest>git add aboutMe.txt
+
+C:\Users\Leo Lai\gittest>git commit -m "updated aboutMe.txt with added favorite movie"
+[master 0597344] updated aboutMe.txt with added favorite movie
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\Leo Lai\gittest>git log
+commit 059734476703e0f2dfe194f1cbaa959c0fdf86c7 (HEAD -> master)
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:37:02 2018 -0700
+
+    updated aboutMe.txt with added favorite movie
+
+commit 4718540a25ce003646ade0add0d689d3865382bd
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:34:35 2018 -0700
+
+    updated aboutMe.txt
+
+commit e3beb5068b051b6a8a1569b7dadf8ab379ef0126
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:32:23 2018 -0700
+
+    aboutMe.txt added
+
+C:\Users\Leo Lai\gittest>git revert -n HEAD
+
+C:\Users\Leo Lai\gittest>git diff
+
+C:\Users\Leo Lai\gittest>git log
+commit 059734476703e0f2dfe194f1cbaa959c0fdf86c7 (HEAD -> master)
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:37:02 2018 -0700
+
+    updated aboutMe.txt with added favorite movie
+
+commit 4718540a25ce003646ade0add0d689d3865382bd
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:34:35 2018 -0700
+
+    updated aboutMe.txt
+
+commit e3beb5068b051b6a8a1569b7dadf8ab379ef0126
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:32:23 2018 -0700
+
+    aboutMe.txt added
+
+C:\Users\Leo Lai\gittest>git status
+On branch master
+You are currently reverting commit 0597344.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --abort" to cancel the revert operation)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   aboutMe.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   aboutMe.txt
+
+
+C:\Users\Leo Lai\gittest>git add aboutMe.txt
+
+C:\Users\Leo Lai\gittest>git commit -m "reverted and added favorite book instead"
+[master 6988e8d] reverted and added favorite book instead
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\Leo Lai\gittest>git log
+commit 6988e8d7b0041b81ae716f2ec25ce149a87f4fb0 (HEAD -> master)
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:45:01 2018 -0700
+
+    reverted and added favorite book instead
+
+commit 059734476703e0f2dfe194f1cbaa959c0fdf86c7
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:37:02 2018 -0700
+
+    updated aboutMe.txt with added favorite movie
+
+commit 4718540a25ce003646ade0add0d689d3865382bd
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:34:35 2018 -0700
+
+    updated aboutMe.txt
+
+commit e3beb5068b051b6a8a1569b7dadf8ab379ef0126
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 17:32:23 2018 -0700
+
+    aboutMe.txt added
+
+C:\Users\Leo Lai\gittest>

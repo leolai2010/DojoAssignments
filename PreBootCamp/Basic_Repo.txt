@@ -1,0 +1,90 @@
+Microsoft Windows [Version 10.0.16299.125]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Leo Lai>md basic_repo
+
+C:\Users\Leo Lai>cd basic_repo
+
+C:\Users\Leo Lai\basic_repo>git init
+Initialized empty Git repository in C:/Users/Leo Lai/basic_repo/.git/
+
+C:\Users\Leo Lai\basic_repo>copy NUL RepoReadMe.txt
+        1 file(s) copied.
+
+C:\Users\Leo Lai\basic_repo>git add RepoReadMe.txt
+
+C:\Users\Leo Lai\basic_repo>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   RepoReadMe.txt
+
+
+C:\Users\Leo Lai\basic_repo>git commit -m "adding new file"
+[master (root-commit) 2f102e7] adding new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 RepoReadMe.txt
+
+C:\Users\Leo Lai\basic_repo>git log
+commit 2f102e7e0fb9eae4c1b5274dca6fc138bb03766d (HEAD -> master)
+Author: Leo <leolai2010@gmail.com>
+Date:   Mon Apr 16 18:48:19 2018 -0700
+
+    adding new file
+
+C:\Users\Leo Lai\basic_repo>git remote add origin https://github.com/leolai2010/basic_repo.git
+
+C:\Users\Leo Lai\basic_repo>git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 215 bytes | 215.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/leolai2010/basic_repo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\Leo Lai\basic_repo>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   RepoReadMe.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Leo Lai\basic_repo>git add RepoReadMe.txt
+
+C:\Users\Leo Lai\basic_repo>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   RepoReadMe.txt
+
+
+C:\Users\Leo Lai\basic_repo>git commit -m "added few more lines in readme to show changes I've made"
+[master f67f97f] added few more lines in readme to show changes I've made
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Leo Lai\basic_repo>git remote add origin https://github.com/leolai2010/basic_repo.git
+fatal: remote origin already exists.
+
+C:\Users\Leo Lai\basic_repo>git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/leolai2010/basic_repo.git
+   2f102e7..f67f97f  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\Leo Lai\basic_repo>

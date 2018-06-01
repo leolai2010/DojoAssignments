@@ -1,0 +1,43 @@
+C:\Users\Leo Lai>
+
+C:\Users\Leo Lai>cd Desktop
+
+C:\Users\Leo Lai\Desktop>md test
+
+C:\Users\Leo Lai\Desktop>cd test
+
+C:\Users\Leo Lai\Desktop\test>copy NUL index.html
+        1 file(s) copied.
+
+C:\Users\Leo Lai\Desktop\test>copy NUL styles.css
+        1 file(s) copied.
+
+C:\Users\Leo Lai\Desktop\test>copy NUL commands.txt
+        1 file(s) copied.
+
+C:\Users\Leo Lai\Desktop\test>copy index.html
+The file cannot be copied onto itself.
+        0 file(s) copied.
+
+C:\Users\Leo Lai\Desktop\test>copy index.html index_2.html
+        1 file(s) copied.
+
+C:\Users\Leo Lai\Desktop\test>del styles.css
+
+C:\Users\Leo Lai\Desktop\test>cd..
+
+C:\Users\Leo Lai\Desktop>md destination
+
+C:\Users\Leo Lai\Desktop>xcopy test destination
+test\commands.txt
+test\index.html
+test\index_2.html
+3 File(s) copied
+
+C:\Users\Leo Lai\Desktop>rd destination
+The directory is not empty.
+
+C:\Users\Leo Lai\Desktop>rd /s destination
+destination, Are you sure (Y/N)? Y
+
+C:\Users\Leo Lai\Desktop>
