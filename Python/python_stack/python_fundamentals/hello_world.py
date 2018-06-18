@@ -1,5 +1,3 @@
-print("Hello World!")
-x = "Hello Python"
-print(x)
-y = 42
-print(y)
+print ("Hello There! This is the Text Editor: Visual Studio by Microsoft")
+print ("Hello Python!")
+print ("42")
