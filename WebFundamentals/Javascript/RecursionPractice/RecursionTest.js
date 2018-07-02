@@ -1,20 +1,18 @@
-function rBS(str){
+function StrSubsets(Str) {
     var arr = [];
-    function inner(newstr) {
-        if (newstr.length == str.length){
-            arr.push(newstr);
-            return;
-        } else {
-            var char = str[newstr.length];
-            if (char != "?") {
-                inner(newstr + char);
-            } else {
-                inner(newstr + "0");
-                inner(newstr + "1");
+    function inner(newStr, count) {
+        for(var i=0; i<str.length; i++){
+            if(newStr[0] == str[i]){
+                arr.push(newStr[i])
+            } else if(i>count) {
+                var char = Str[newStr.length];
+                if(char != newStr[i]){
+                    inner(newStr + char, count+1);
+                } else {
+                    inner(newStr, count+1);
+                }
             }
         }
     }
-    inner("");
-    return arr;
 }
-console.log(rBS("1?0?"))
+console.log(StrSubsets("abc"))
