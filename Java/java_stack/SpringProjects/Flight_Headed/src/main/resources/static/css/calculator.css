@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+.drinktable{
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: top;
+    background-color: white;
+    box-shadow: 5px 4px 17px grey;
+}
+.alcoholinfo{
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: top;
+    background-color: white;
+    box-shadow: 5px 4px 17px grey;
+}
+.personinfo{
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: top;
+    background-color: white;
+    box-shadow: 5px 4px 17px grey;
+}
+.resultbox{
+	display: inline-block;
+    height: 350px;
+    width: 1250px;
+    margin: 10px;
+    padding: 10px;
+    vertical-align: top;
+    background-color: white;
+    box-shadow: 5px 4px 17px grey;
+    text-align:center;
+}
+body{
+	background-image:url('../images/BeerFlightBackground.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
