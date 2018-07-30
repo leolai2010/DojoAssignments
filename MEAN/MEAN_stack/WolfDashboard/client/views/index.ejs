@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wolf</title>
+</head>
+<body>
+    <div>
+    <h1>Wolves</h1>
+    <table>
+    <tr>
+        <th>Name</th>
+        <th>Gender</th> 
+        <th>Size</th>
+        <th>Action</th>
+    </tr>
+    <% for (var x in wolf) { %>
+    <tr>
+        <td><%= wolf[x].name %></td>
+        <td><%= wolf[x].gender %></td> 
+        <td><%= wolf[x].size %></td>
+        <td>
+            <a href="/edit/<%= wolf[x]._id %>">Edit</a>
+            <a href="/delete/<%= wolf[x]._id %>">Delete</a>
+        </td>
+    </tr>
+    <% } %>
+    </table>
+    <a href="/new">New Wolf</a>
+    </div>
+</body>
+</html>

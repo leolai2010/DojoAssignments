@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Trivia</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="data"></div>
+  <div id="questions"></div>
+<script>
+    $.get("https://opentdb.com/api.php?amount=10", displayCategories)
+        function displayCategories(data) {
+            for (i in data.results){
+                 console.log(data.results[i]);
+                $("#data").append("<li>"+ data.results[i].question +"</li>" + "<ul>" + data.results[i].correct_answer + "</ul>" , "<ul>" + data.results[i].incorrect_answers + "</ul>");
+            }
+    }
+</script>
+</body>
+</html>

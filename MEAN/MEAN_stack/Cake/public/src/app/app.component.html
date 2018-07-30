@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cake</title>
+</head>
+<body>
+  <h1>Rate My Cakes</h1>
+  <fieldset>
+    <form (submit)="onCakeSubmit()">
+      Baker: <input type="text" name="newCake.baker" [(ngModel)]="newCake.baker" />
+      Image URL: <input type="text" name="newCake.imageurl" [(ngModel)]="newCake.imageurl" />
+      <input type="submit" value="Create Cake" />
+    </form>
+  </fieldset>
+  <fieldset class="cakebox">
+  <div *ngFor="let cake of cakes">
+    <p>{{ cake.baker }}</p>
+    <img (click)="showCommentClick(cake._id)" class="cakeimg" src="{{ cake.imageurl }}"/>
+    <form (submit)="onCommentSubmit(cake._id)">
+        <select name="newComment.rating" [(ngModel)]="newComment.rating"  >
+            <option value="5 Stars">5 Stars</option>
+            <option value="4 Stars">4 Stars</option>
+            <option value="3 Stars">3 Stars</option>
+            <option value="2 Stars">2 Stars</option>
+            <option value="1 Stars">1 Stars</option>
+        </select>
+        Name: <input type="text" name="newComment.name" [(ngModel)]="newComment.name"/>
+        Comment:<input type="text" name="newComment.comment" [(ngModel)]="newComment.comment" />
+      <input type="submit" value="Rate Cake" />
+    </form>
+  </div>
+  </fieldset>
+  <fieldset class="commentbox">
+      <app-comment *ngIf='showComment' [content]='showComment'></app-comment>
+  </fieldset>
+</body>
+</html>

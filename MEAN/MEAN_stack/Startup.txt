@@ -1,0 +1,40 @@
+MongoDB
+cd c:/"Program Files"/MongoDB/Server/4.0/bin/
+	mongod.exe 
+	mongo.exe
+
+Express/Node
+npm init -y
+npm install express --save
+npm install body-parser --save
+npm install mongoose --save
+npm install express-session --save
+npm install express-flash --save
+
+Angular
+npm install -g @angular/cli
+	ng new public --routing
+	public ->
+		ng g s http
+		ng generate component <component_name>
+Angular Server Run -> public
+	ng build --watch
+
+React-JSON
+ "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+
+React(-Once npm i -g create-react-app)
+create-react-app client
+client>
+ "proxy":"http://localhost:5000"
+	npm i bootstrap 
+	npm i reactstrap
+	npm i react-transition-group
+C:\Users\Leo Lai\Desktop\MEAN_Project\ThePrimalBrain\public\src\assets\images\Brain.png
+	npm i redux
+	npm i react-redux
+	npm i redux-thunk

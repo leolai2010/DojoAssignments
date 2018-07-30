@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        .row{
+            line-height: 0px;
+        }
+        .green{
+            width: 32px;
+		    height: 32px;
+            background-color: green;
+		    display: inline-block;
+        }
+        .blue{
+            width: 32px;
+		    height: 32px;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="world"></div>
+    <script>
+        var world = [
+            [1,1,1,1,1,1,1,1,1,1,1,1,1],
+            [1,2,2,2,1,2,2,2,2,2,2,2,1],
+            [1,2,2,2,1,2,2,2,2,2,2,2,1],
+            [1,2,2,2,1,2,2,2,2,2,2,2,1],
+            [1,1,1,1,1,1,1,1,2,2,2,2,1],
+            [1,2,2,2,2,2,2,1,2,2,2,2,1],
+            [1,2,2,2,2,2,2,1,2,2,2,2,1],
+            [1,2,2,2,2,2,2,1,2,2,2,2,1],
+            [1,2,2,2,2,2,2,1,2,2,2,2,1],
+            [1,1,1,1,1,1,1,1,1,1,1,1,1]
+        ];
+        function drawWorld(){
+        var worldDict = {
+  		1: 'green',
+  		2: 'blue'
+        }
+        output = "";
+            for(var row = 0; row<world.length; row++)
+            {
+                output += "<div class = 'row'>"
+                for(var x = 0; x<world[row].length; x++)
+                {
+                    output += "<div class = '" + worldDict[world[row][x]] +"'></div>"
+                }
+                output += "</div>"
+            }
+            document.getElementById('world').innerHTML = output;
+        }
+        drawWorld();
+        function floodfill(row, x, tcolor, rcolor){
+            if(block[row][x] == rcolor){
+                return 
+            } else {
+                block[x][y] == tcolor
+                floodfill(x+1, y)
+                floodfill(x-1, y)
+                floodfill(x, y+1)
+                floodfill(x, y-1)
+            }
+        }
+    </script>
+</body>
+</html>

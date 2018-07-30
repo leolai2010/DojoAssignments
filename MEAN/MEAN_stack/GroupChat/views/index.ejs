@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Conversation Board</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+    $(document).ready(function (){
+        $("#chatroom").hide();
+        var socket = io(); 
+        socket.on('username', function(data){
+            var person = prompt(data.welcome);
+            if(person != null){
+                socket.emit('newuser', {user:person})
+            }     
+        });            
+        socket.on('updated_chatroom', function(data){
+            $("#chatroom").show();
+            $("#send").click(function(e){
+                e.preventDefault();
+                socket.emit('user_msg', {msg: $("#msgbox").val(), user: data.user});
+            });
+        });
+        socket.on('updated_message', function(data){
+            $("#chatbox").append(data.user + " : " + data.msg + "<br>");
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="chatroom">
+    <h4>Conversation Board</h4>
+    <fieldset id="chatbox" style="width:600px; height:600px">
+        
+    </fieldset>
+    <br>
+    <form>
+        <input id="msgbox"name="msg" type="text"/>
+        <button id="send">Send</button>
+    </form>
+    </div>
+</body>
+</html>

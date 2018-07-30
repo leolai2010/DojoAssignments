@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Draw Chicken</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <h4>Drawing Board</h4>
+  <div id="board">
+  <canvas id="drawing" >
+  </canvas>
+  <form>
+      <input type="button" value="Clear" onclick="clearit();"/>
+  </form>
+  </div>
+  <div id="chatroom">
+      <h4>Conversation Board</h4>
+      <fieldset id="chatbox" style="width:600px; height:600px">
+      </fieldset>
+      <br>
+      <form>
+          <input id="msgbox"name="msg" type="text"/>
+          <button id="send">Send</button>
+      </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+  <script type="text/javascript">
+  $("#chatroom").hide();
+  var socket = io(); 
+    socket.on('username', function(data){
+      var person = prompt("Pleaase Enter your name");
+      if(person != null){
+          socket.emit('newuser', {user:person})
+      }     
+    });
+    socket.on('updated_chatroom', function(data){
+      $("#chatroom").show();
+      $("#send").click(function(e){
+        e.preventDefault();
+        socket.emit('user_msg', {msg: $("#msgbox").val(), user: data.user});
+      });
+    });
+    socket.on('updated_message', function(data){
+      $("#chatbox").append(data.user + " : " + data.msg + "<br>");
+    });              
+    $("#reset").click(function(e){
+      e.preventDefault();
+      socket.emit('resetting', []);
+    });
+    socket.on('clearit', function(){
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      console.log("client clearit");
+    });
+  </script>
+</body>
+</html>

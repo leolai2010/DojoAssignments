@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Sockets</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+    $(document).ready(function (){
+    var socket = io(); 
+    $("#formsubmit").click(function(e){
+      e.preventDefault();
+      socket.emit('posting_form', {objectify:{name: $("#fname").val(), location: $("select#country").val(), language: $("select#language").val(), comment: $("#subject").val()}});
+      });
+      socket.on('updated_message', function(data){
+        $("#emitmsg").append(data.msg1);
+      });
+      socket.on('random_number', function(data){
+        $("#emitmsg").append(data.msg2);
+      });
+    })
+    </script>
+</head>
+<body>
+    <h1>Fun with sockets</h1>  
+</body>
+</html>

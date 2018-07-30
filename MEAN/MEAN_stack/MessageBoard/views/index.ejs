@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Board</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Message Board</h1>
+        <% if(messages.registration) { %>
+            <% for (var x of messages.registration) { %>
+             <h3><%= x %></h3>
+            <% } %>
+        <% } %>
+        <form action="/newmessage" method="POST">
+            Name: <input type="text" name="name">
+            <br>
+            <br>
+            Message: <textarea name="message"></textarea>
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+        <div>
+            <% for (var x in allmessages) { %>
+            <p>Name:<%= allmessages[x].name %></p>
+            <p>Message:<%= allmessages[x].message %></p>
+            <form action="/newcomment/<%= allmessages[x]._id %>" method="POST">
+                Name: <input type="text" name="cname">
+                <br>
+                <br>
+                Comment: <textarea name="comment"></textarea>
+                <br>
+                <br>
+                <input type="submit">
+            </form>
+            <h3>Comments</h3>
+                <% for (var y in allmessages[x].comments) { %>
+                    <h4><%= allmessages[x].comments[y].person %></h4>
+                    <p><%= allmessages[x].comments[y].comment %></p>
+                    
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+
+</body>
+</html>

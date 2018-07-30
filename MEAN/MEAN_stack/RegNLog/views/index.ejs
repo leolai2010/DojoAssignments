@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration & Login</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <% if(messages.info) { %>
+     <% for (var x of messages.info) { %>
+      <h3><%= x %></h3>
+     <% } %>
+    <% } %>
+    <fieldset>
+        <h1>Registration Form</h1>
+        <form method='post' action='/register'>
+            Name:<input type='text' name='name'>
+            Email:<input type='email' name='email'>
+            Password:<input type='password' name='password'>
+            Password Confirmation:<input type='password' name='confpassword'>
+            <input type="submit" value="Submit">
+        </form>
+    </fieldset>
+    <fieldset>  
+        <h1>Login</h1>
+        <form method='post' action='/login'>
+            Email:<input type='email' name='email'>
+            Password:<input type='password' name='password'>
+            <input type="submit" value="Submit">
+        </form>
+    </fieldset>
+</body>
+</html>

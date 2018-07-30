@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote</title>
+</head>
+<body>
+    <div>
+    <%- JSON.stringify(messages) %> 
+    <% if(messages.registration) { %>
+        <% for (var x of messages.registration) { %>
+         <h3><%= x %></h3>
+        <% } %>
+    <% } %>
+    <form action="/users" method="POST">
+        <br>
+        <br>
+        Name:<input name="name" type="text"/>
+        <br>
+        <br>
+        Quote:<input name="quote" type="text"/>
+        <br>
+        <br>
+        <button>Submit</button>
+    </form>
+    </div>
+    <div>
+    <% for (var x in users) { %>
+        <p>Name: <%= users[x].name %></p>
+        <p>Quote:"<%= users[x].quote %>"</p>
+        <p>Time: <%= users[x].createdAt %></p>
+    <% } %>
+    </div>
+</body>
+</html>

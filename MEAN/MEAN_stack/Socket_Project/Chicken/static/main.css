@@ -1,0 +1,25 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+body, html{
+  width: 100%;
+  height: 100%;
+}
+#board {
+  width:870px;
+  height:700px;
+  border: solid 2px black;
+}
+#canvas {
+  display: block;
+  position: relative;
+  width:870px;
+  height:700px;
+  border: solid 2px black;
+}
+#chatroom{
+  position: absolute;
+  right: 2%;
+  top: 4%;
+}

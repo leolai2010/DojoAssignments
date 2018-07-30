@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Epic Button</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+    $(document).ready(function (){
+    var socket = io(); 
+        $("#green").click(function(e){
+            e.preventDefault();
+            socket.emit('button_green', {color:"green"});
+            });
+            socket.on('updated_green', function(data){
+                $("body").css("background-color", data.color);
+        });
+        $("#blue").click(function(e){
+            e.preventDefault();
+            socket.emit('button_blue', {color:"blue"});
+            });
+            socket.on('updated_blue', function(data){
+                $("body").css("background-color", data.color);
+        });
+        $("#red").click(function(e){
+            e.preventDefault();
+            socket.emit('button_red', {color:"red"});
+            });
+            socket.on('updated_red', function(data){
+                $("body").css("background-color", data.color);
+        });
+    });
+    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
+</head>
+<body>
+    <button id="green">Green</button>
+    <button id="blue">Blue</button>
+    <button id="red">Red</button>
+</body>
+</html>
